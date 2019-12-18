@@ -23,7 +23,7 @@ def get_random_bytes():
 
 
 def hash_bytes(data):
-    r = requests.post("http://hasher/",
+    r = requests.post("http://hasher:8282/",
                       data=data,
                       headers={"Content-Type": "application/octet-stream"})
     hex_hash = r.text
